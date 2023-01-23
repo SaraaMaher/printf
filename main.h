@@ -17,12 +17,12 @@
 typedef struct type
 {
 char t;
-int (*f)(va_list, int);
+int (*f)(char *, va_list, int);
 } type_t;
 int _printf(const char *format, ...);
-int parse_str(va_list arg, int count);
-int parse_char(va_list arg, int count);
-int parse_perc(va_list arg, int count);
-int parse_int(va_list list, int count);
-int parse_decimal(va_list list, int count);
+int parse_str(char *buff, va_list arg, int count);
+int parse_char(char *buff, va_list arg, int count);
+int parse_perc(char *buff, va_list arg, int count);
+int parse_int(char *buff, va_list list, int count);
+
 #endif

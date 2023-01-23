@@ -8,6 +8,7 @@ int _printf(const char *format, ...)
 {
 int i = 0, j, count = 0;
 va_list arg;
+char buffer[2000];
 type_t c[] = {{'c', parse_char}, {'s', parse_str}, {'%', parse_perc}};
 if (!format)
 return (-1);
@@ -23,7 +24,7 @@ if (format[i] == '\0')
 break;
 if (format[i] == c[j].t)
 {
-count = c[j].f(arg, count);
+count = c[j].f(buffer, arg, count);
 break;
 }
 }

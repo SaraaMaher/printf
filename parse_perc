@@ -1,11 +1,13 @@
 #include "main.h"
 /**
  * parse_perc - count perc
+ * @buff: buffer
  * @arg: list of arguments
  * @count: counter
  * Return: count
  */
-int parse_perc(va_list arg, int count)
+int parse_perc(char *buff, va_list arg, int count)
 {
+buff[count] = '%';
 return (++count);
 }

@@ -1,11 +1,12 @@
 #include "main.h"
 /**
  * parse_str - count str
+ * @buff: buffer
  * @arg: string
  * @count: counter
  * Return: count
  */
-int parse_str(va_list arg, int count)
+int parse_str(char *buff, va_list arg, int count)
 {
 char *str;
 int i = 0;
@@ -13,9 +14,13 @@ str = va_arg(arg, char *);
 if (str == NULL)
 str = "(null)";
 if (str[0] == '\0')
+{
+buff[count] = '\0';
 count++;
+}
 while (str[i] != '\0')
 {
+buff[count] = str[i];
 i++;
 count++;
 }

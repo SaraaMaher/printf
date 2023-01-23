@@ -1,11 +1,14 @@
 #include "main.h"
 /**
  * parse_char - count char
+ * @buff: buffer
  * @arg: char
  * @count: character counter
  * Return: count
  */
-int parse_char(va_list arg, int count)
+int parse_char(char *buff, va_list arg, int count)
 {
+char c = va_arg(arg, int);
+buff[count] = c;
 return (++count);
 }
