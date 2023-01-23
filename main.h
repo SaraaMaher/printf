@@ -20,7 +20,7 @@ char t;
 int (*f)(char *, va_list, int);
 } type_t;
 int _printf(const char *format, ...);
-int parse_str(char *buff, va_list arg, int count);
+int parse_str(va_list arg, int count);
 int parse_char(char *buff, va_list arg, int count);
 int parse_perc(char *buff, va_list arg, int count);
 int parse_int(char *buff, va_list list, int count);
