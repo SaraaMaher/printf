@@ -36,6 +36,5 @@ break;
 i++;
 }
 va_end(arg);
-write(1, count);
 return (count);
 }
