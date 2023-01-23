@@ -1,0 +1,11 @@
+#include "main.h"
+/**
+ * parse_perc - count perc
+ * @arg: list of arguments
+ * @count: counter
+ * Return: count
+ */
+int parse_perc(va_list arg, int count)
+{
+return (++count);
+}

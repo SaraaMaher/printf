@@ -1,0 +1,11 @@
+#include "main.h"
+/**
+ * parse_char - count char
+ * @arg: char
+ * @count: character counter
+ * Return: count
+ */
+int parse_char(va_list arg, int count)
+{
+return (++count);
+}
