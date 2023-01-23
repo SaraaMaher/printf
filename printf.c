@@ -31,6 +31,5 @@ break;
 i++;
 }
 va_end(arg);
-printf("%d", count);
 return (count);
 }
